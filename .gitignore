@@ -1,3 +1,10 @@
+# User created text files
+*.txt
+
+# .py files
+basic_config.py
+test.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
