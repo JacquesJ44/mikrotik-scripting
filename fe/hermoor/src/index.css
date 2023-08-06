@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Tajawal&display=swap');
+
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Tajawal";
+}
+.App-logo {
+  height: 10vmin;
+  max-height: 60px;
+  pointer-events: none;
+}
+.roundedborders {
+  border-radius: var(--rounded-box, 1rem);
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+/*.navbar h1 {
+  font-size: xx-large;
+  color: #e42222;
+  margin-left: auto;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #ddd;
+}*/
+
+/*.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}*/
+
+
+
+/* home */
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  min-height: 70vh;
+}
+.home label {
+  text-align: left;
+  display: block;
+}
+.home h2 {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+.home h4 {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+.home input, .home textarea, .home select {
+  height: 200px;
+  /*width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;*/
+}
+.home button {
+  /* background: #f1356d; */
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.chance {
+  color: #ddd;
+} 
+.settings, .logout {
+  min-height: 70vh;
+}
