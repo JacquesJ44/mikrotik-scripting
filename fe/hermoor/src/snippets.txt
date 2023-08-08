@@ -1,0 +1,169 @@
+ <div className="border flex hero">
+      <div className="hero-content text-center">
+        <div className="max-w-md">
+          <div className="border form-control">
+            <div className="flex items-center mb-4">
+              <input id='script_only' 
+                    type="radio" 
+                    name="radio-1" 
+                    className="radio"
+                    // value={script_only}
+                    // checked={checked ? script_only === true : script_only === false}
+                    onClick={(e) => {setScript_only(true); console.log("Script_only: " + script_only)}} 
+                    />
+              <label>Script only</label>
+            </div>
+            { script_only ? (
+                        <div className="form-control">
+                          <label className="label">
+                            <span className="label-text">Router ID</span>
+                          </label>
+                          <input placeholder="Name of Router" className="input input-bordered w-full max-w-xs"
+                              type="text"
+                              required
+                              // value={ email }
+                              // onChange={(e) => setEmail(e.target.value)}
+                          />
+                        </div>
+) : (
+    ''
+)}  
+           <div className="flex items-center mb-4">
+              <input id='script_wifi' 
+                    type="radio" 
+                    name="radio-1" 
+                    className="radio"
+                    // value={script_wifi}
+                    // checked={checked ? script_wifi === true : script_wifi === false}
+                    onClick={(e) => {setScript_wifi(true), console.log("Script_wifi: " + script_wifi)}} 
+                    />
+              <label>Script with SSID/Password</label>
+            </div>
+            { script_wifi ? (
+            <>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Router ID</span>
+                  </label>
+                  <input placeholder="Name of Router" className="input input-bordered w-full max-w-xs"
+                    type="text"
+                    required />
+                </div><div className="form-control">
+                    <label className="label">
+                      <span className="label-text">2.4GHz SSID</span>
+                    </label>
+                    <input placeholder="2.4GHz SSID" className="input input-bordered w-full max-w-xs"
+                      type="text"
+                      required />
+                  </div><div className="form-control">
+                    <label className="label">
+                      <span className="label-text">2.4GHz Password</span>
+                    </label>
+                    <input placeholder="2.4GHz Password" className="input input-bordered w-full max-w-xs"
+                      type="text"
+                      required />
+                  </div><div className="form-control">
+                    <label className="label">
+                      <span className="label-text">5GHz SSID</span>
+                    </label>
+                    <input placeholder="5GHz SSID" className="input input-bordered w-full max-w-xs"
+                      type="text"
+                      required />
+                  </div><div className="form-control">
+                    <label className="label">
+                      <span className="label-text">5GHz Password</span>
+                    </label>
+                    <input placeholder="5GHz Password" className="input input-bordered w-full max-w-xs"
+                      type="text"
+                      required />
+                  </div>
+            </>
+) : (
+    ''
+)}  
+            <button className="btn btn-primary">DO IT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div className="border hero my-10">
+          <div className="hero-content">
+      
+            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-200">
+              <div className="card-body">
+                <form >  
+                  {/* onSubmit={ handleSubmit } */}
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Email</span>
+                  </label>
+                  <input placeholder="email" className="input input-bordered w-full max-w-xs"
+                      type="email"
+                      required
+                      // value={ email }
+                      // onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Password</span>
+                  </label>
+                  <input placeholder="password" className="input input-bordered w-full max-w-xs"
+                      type="password" 
+                      required
+                      // value={ password }
+                      // onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <label className="label">
+                    <a href="/forgot" className="label-text-alt link link-hover">Forgot password?</a>
+                  </label>
+                </div>
+                <div className="form-control mt-6">
+                  <button className="btn btn-primary">Login</button>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </>
+  );
+}
+
+
+
+ <div className="mt-4 space-y-4">
+      <div className="flex items-center">
+        <input id="script_wifi" name="type" type="radio"
+          onClick={(e) => {setScript_wifi(false); console.log("Script_wifi: " + script_wifi)}}
+          className="focus:ring-yellow-400 h-4 w-4 text-yellow-300 border-gray-300"
+        />
+        <label htmlFor="script_wifi" className="ml-3 block text-sm font-medium text-gray-700">
+        Script with SSID/Password
+        </label>
+      </div>
+    </div>
+
+
+
+/* <div className="mt-4 space-y-4">
+      <div className="flex items-center">
+        <input id="script_only" name="type" type="radio"
+          onClick={(e) => {setScript_only(false); console.log("Script_only: " + script_only)}}
+          // defaultChecked="checked"
+          className="focus:ring-yellow-400 h-4 w-4 text-yellow-300 border-gray-300"
+          />
+        <label htmlFor="script_only" className="ml-3 block text-sm font-medium text-gray-700">
+        Script only
+        </label>
+      </div>
+    </div> */
+
+
+
+

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { IP } from './config.js';
 
 import logo from './logo.svg';
 import './App.css';
@@ -20,9 +21,26 @@ function App() {
       ssid2_pw: ssid2_pw,
       ssid5_un: ssid5_un,
       ssid5_pw: ssid5_pw
-    }
-    console.log(form)
-  }
+    };
+    // console.log(form)
+    fetch(IP + '/', {
+      method: 'POST',
+      headers: { "Authorization": 'Basic',
+                "Content-Type": 'application/json',
+                "Access-Control-Allow-Origin": 'true'},
+      body: JSON.stringify(form),
+      mode: "cors",
+      credentials: "include"
+    }).then(res => {
+      console.log(res);
+      return res.json();
+  }) .then(data => {
+    console.log(data)
+    })
+}
+// .then(() => {
+//     navigate('/antrag/3')
+//   }) 
 
   return (
   <>  
