@@ -114,9 +114,10 @@ function App() {
               <span className="label-text">WPA Preshared Key</span>
             </label>
             <input placeholder="WPA Preshared Key" className="input input-bordered w-full max-w-xs"
+              title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number."
               type="text"
               // required
-              pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
               value={ wpa_pass }
               onChange={(e) => setWpa_pass(e.target.value)} 
               />
@@ -126,9 +127,10 @@ function App() {
               <span className="label-text">WPA2 Preshared Key</span>
             </label>
             <input placeholder="WPA2 Preshared Key" className="input input-bordered w-full max-w-xs"
+              title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number."
               type="text"
               // required
-              pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"            
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"           
               value={ wpa2_pass }
               onChange={(e) => setWpa2_pass(e.target.value)} 
               />
